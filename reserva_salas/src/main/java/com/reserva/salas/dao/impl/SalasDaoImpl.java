@@ -11,7 +11,9 @@ import org.springframework.stereotype.Repository;
 import com.reserva.salas.configuration.dao.GenericDao;
 import com.reserva.salas.dao.SalasDao;
 import com.reserva.salas.dto.SalasDto;
+import com.reserva.salas.dto.UsuarioDto;
 import com.reserva.salas.entity.SalasEntity;
+import com.reserva.salas.entity.UsuarioEntity;
 
 @Repository
 public class SalasDaoImpl extends GenericDao implements SalasDao {
@@ -19,15 +21,14 @@ public class SalasDaoImpl extends GenericDao implements SalasDao {
 	@Override
 	public List<SalasDto> getSalas() {
 		Query q = entityManager.createQuery(
-				"FROM salas s");
+				"SELECT e FROM SalasEntity e");
 		List<SalasEntity> listSalasEntity = q.getResultList();
 		List<SalasDto> listSalasDto = new ArrayList<SalasDto>();
-		
-		for (int i = 0; i < listSalasEntity.size(); i++) {
-			SalasEntity rolEntity  = listSalasEntity.get(i);
-			SalasDto rolDto = new SalasDto();
-			BeanUtils.copyProperties(rolEntity, rolDto );
-			listSalasDto.add(rolDto);
+		for (SalasEntity salasEntity : listSalasEntity) {
+			SalasDto salasDto = new SalasDto();
+			BeanUtils.copyProperties(salasEntity, salasDto);
+			salasDto.setIdsala(salasEntity.getIdsala());
+			listSalasDto.add(salasDto);
 		}
 		 
 		return listSalasDto;

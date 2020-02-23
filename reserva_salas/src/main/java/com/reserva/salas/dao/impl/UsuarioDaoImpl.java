@@ -73,6 +73,7 @@ public class UsuarioDaoImpl extends GenericDao implements UsuarioDao {
 			for (UsuarioEntity usuarioEntity : listUsuarioEntity) {
 				UsuarioDto usuarioDto = new UsuarioDto();
 				BeanUtils.copyProperties(usuarioEntity, usuarioDto);
+				usuarioDto.setIdusuario(usuarioEntity.getIdUsuario());
 				listUsuarioDto.add(usuarioDto);
 			}
 			return listUsuarioDto;

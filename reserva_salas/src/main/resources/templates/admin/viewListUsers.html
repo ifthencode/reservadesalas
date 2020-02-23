@@ -17,14 +17,14 @@
 	
 	<!-- <div th:replace="admin/menu :: menu"></div> -->
 	
-	<form th:action="@{/alumno/deleteUser}" method="POST">	
+<!-- 	<form th:action="@{/alumno/deleteUser}" method="POST">	 -->
 	<table class="table"  data-row-style="rowStyle" data-toggle="table" data-click-to-select="true">
 		  <thead class="thead-dark">
 		    <tr>
-		      <th sec:authorize="hasAuthority('Admin')" scope="col">Seleccionar</th>
-		      <th scope="col">Usuario</th>
+		    <!--   <th sec:authorize="hasAuthority('Admin')" scope="col">Seleccionar</th> -->
+		      <th scope="col">Id</th>
 		      <th scope="col">Nombre</th>
-		      <th scope="col">Apellido1</th>
+		      <th scope="col">Apellidos</th>
 		      <th scope="col">Email</th>
 		    </tr>
 		  </thead>
@@ -39,10 +39,10 @@
 		    </tr>		    
 		  </tbody>
 	</table>
-	<div sec:authorize="hasAuthority('Admin')" class="botonera">
+	<!-- <div sec:authorize="hasAuthority('Admin')" class="botonera">
 		 <button class="btn btn-success">Eliminar</button>
 	</div>
-	</form>
+	</form> -->
 	
 	</div>
 </body>

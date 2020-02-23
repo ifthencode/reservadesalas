@@ -12,19 +12,21 @@ import javax.persistence.Table;
 public class SalasEntity {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
-	private Long id;
+	private Long idsala;
 	
 	@Column(name = "nombre")
 	private String nombre;
 	
-	public Long getId() {
-		return id;
+	@Column(name = "descripcion")
+	private String descripcion;
+
+	public Long getIdsala() {
+		return idsala;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdsala(Long idsala) {
+		this.idsala = idsala;
 	}
 
 	public String getNombre() {

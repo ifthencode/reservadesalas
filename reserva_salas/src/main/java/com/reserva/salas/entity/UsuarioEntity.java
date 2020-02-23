@@ -15,8 +15,10 @@ import javax.persistence.Table;
 @Table(name="usuarios")
 public class UsuarioEntity  {
 	
+	
+	  
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "idusuario")
 	private Long idusuario;
 	/*
@@ -45,10 +47,9 @@ public class UsuarioEntity  {
 		return idusuario;
 	}
 
-	public void setIdUsuario(Long id) {
-		this.idusuario = id;
-	}
-
+	/*
+	 * public void setIdUsuario(Long id) { this.idusuario = id; }
+	 */
 	public String getNombre() {
 		return nombre;
 	}

@@ -24,6 +24,8 @@ public class UsuarioController {
 	
 	@Autowired
 	private UsuarioServiceImpl usuarioService;
+	
+	
 
 	@Autowired
 	private SalasServiceImpl salaService;
@@ -62,15 +64,22 @@ public class UsuarioController {
 	        return m;
 	 }
 	
-	@RequestMapping(value="/", method = RequestMethod.GET)
-	public ModelAndView viewListAdmin(){
+	@RequestMapping(value="/usuarios", method = RequestMethod.GET)
+	public ModelAndView viewListUsuarios(){
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("admin/viewListUser");
+		modelAndView.setViewName("admin/viewListUsers");
 		//obtenemos los usuarios que sean del tipo estudiante
 		modelAndView.addObject("listUsers",usuarioService.getUsuarios());
 		return modelAndView;
 	}
-	
+	@RequestMapping(value="/salas", method = RequestMethod.GET)
+	public ModelAndView viewListSalas(){
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("admin/viewListSalas");
+		//obtenemos los usuarios que sean del tipo estudiante
+		modelAndView.addObject("listSalas",salaService.getSalas());
+		return modelAndView;
+	}
 	/*
 	 * @RequestMapping(value="/viewListStudent", method = RequestMethod.GET) public
 	 * ModelAndView viewListStudent(){ ModelAndView modelAndView = new

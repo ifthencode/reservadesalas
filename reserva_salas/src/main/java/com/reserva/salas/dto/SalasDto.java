@@ -2,15 +2,26 @@ package com.reserva.salas.dto;
 
 public class SalasDto {
 
-	private Long id;
+	private Long idsala;
 	private String nombre;
+	private String descripcion;
 	
-	public Long getId() {
-		return id;
+	
+
+	public Long getIdsala() {
+		return idsala;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdsala(Long idsala) {
+		this.idsala = idsala;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 
 	public String getNombre() {
