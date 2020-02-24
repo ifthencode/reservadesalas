@@ -19,10 +19,12 @@ CREATE TABLE if not exists salas (
     primary key (idsala)
 );
 
-CREATE TABLE disponibilidad(
+CREATE TABLE fechashoras(
+idfechahora int auto_increment,
 hora time,
 fecha date,
-disponible boolean
+disponible boolean,
+primary key (idfechahora)
 );
 
 
@@ -32,12 +34,11 @@ CREATE TABLE if not exists reservas (
     idreserva int auto_increment,
     sala_id int,
     usuario_id int,
-    hora time,
-    fecha date,
+    fechahora_id int,
     comentarios varchar(255),
     primary key (idreserva),
     FOREIGN KEY (sala_id) REFERENCES salas(idsala),
     FOREIGN KEY (usuario_id) REFERENCES usuarios(idusuario),
-    FOREIGN KEY (hora) REFERENCES horas(hora),
-    FOREIGN KEY (fecha) REFERENCES fechas(fecha)
+    FOREIGN KEY (fechahora_id) REFERENCES fechashoras(idfechahora)
+    
 );
