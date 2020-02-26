@@ -1,0 +1,186 @@
+26-Feb-2020 08:06:56.336 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor:   Apache Tomcat/9.0.31
+
+26-Feb-2020 08:06:56.341 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 5 2020 19:32:12 UTC
+26-Feb-2020 08:06:56.342 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:         9.0.31.0
+26-Feb-2020 08:06:56.342 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+26-Feb-2020 08:06:56.342 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      10.0
+
+26-Feb-2020 08:06:56.343 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:          amd64
+
+26-Feb-2020 08:06:56.343 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_241\jre
+26-Feb-2020 08:06:56.343 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_241-b07
+26-Feb-2020 08:06:56.343 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:     Oracle Corporation
+26-Feb-2020 08:06:56.343 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\Jacobo.montero\Documents\reservadesalas\apache-tomcat-9.0.31
+26-Feb-2020 08:06:56.343 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\Jacobo.montero\Documents\reservadesalas\apache-tomcat-9.0.31
+26-Feb-2020 08:06:56.345 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:/Users/Jacobo.montero/Documents/reservadesalas/apache-tomcat-9.0.31/conf/logging.properties
+26-Feb-2020 08:06:56.345 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+26-Feb-2020 08:06:56.346 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+26-Feb-2020 08:06:56.346 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+26-Feb-2020 08:06:56.346 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+26-Feb-2020 08:06:56.346 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+26-Feb-2020 08:06:56.346 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:/Users/Jacobo.montero/Documents/reservadesalas/apache-tomcat-9.0.31
+26-Feb-2020 08:06:56.346 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:/Users/Jacobo.montero/Documents/reservadesalas/apache-tomcat-9.0.31
+26-Feb-2020 08:06:56.346 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:/Users/Jacobo.montero/Documents/reservadesalas/apache-tomcat-9.0.31/temp
+26-Feb-2020 08:06:56.347 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat [1.2.23] con la versión APR [1.7.0].
+26-Feb-2020 08:06:56.347 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true].
+26-Feb-2020 08:06:56.347 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+26-Feb-2020 08:06:56.373 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente [OpenSSL 1.1.1c  28 May 2019]
+26-Feb-2020 08:06:57.222 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+26-Feb-2020 08:06:58.405 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.load Server initialization in [3.242] milliseconds
+26-Feb-2020 08:06:58.496 INFORMACIÓN [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+26-Feb-2020 08:06:58.497 INFORMACIÓN [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.31]
+26-Feb-2020 08:06:58.599 GRAVE [main] org.apache.catalina.core.ContainerBase.startInternal A child container failed during start
+	java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@543c6f6d]
+		at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:916)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@543c6f6d]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		... 21 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jmg39\Documents\reservadesalas\apache-tomcat-9.0.31\wtpwebapps\CursoSpringBoot-master] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 30 more
+26-Feb-2020 08:06:58.603 GRAVE [main] org.apache.catalina.core.ContainerBase.startInternal A child container failed during start
+	java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: A child container failed during start
+		at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:916)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:928)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		... 13 more
+	Caused by: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@543c6f6d]
+		at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:916)
+		... 21 more
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@543c6f6d]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		... 21 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jmg39\Documents\reservadesalas\apache-tomcat-9.0.31\wtpwebapps\CursoSpringBoot-master] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 30 more
+26-Feb-2020 08:06:58.605 GRAVE [main] org.apache.catalina.startup.Catalina.start Tomcat no puede iniciar porque el componente Server requerido fallo al iniciar.
+	org.apache.catalina.LifecycleException: A child container failed during start
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:928)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: A child container failed during start
+		at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:916)
+		... 13 more
+	Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:928)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		... 13 more
+	Caused by: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@543c6f6d]
+		at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:916)
+		... 21 more
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@543c6f6d]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		... 21 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jmg39\Documents\reservadesalas\apache-tomcat-9.0.31\wtpwebapps\CursoSpringBoot-master] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 30 more
+26-Feb-2020 08:06:58.606 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+26-Feb-2020 08:06:58.609 INFORMACIÓN [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+26-Feb-2020 08:06:58.616 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
