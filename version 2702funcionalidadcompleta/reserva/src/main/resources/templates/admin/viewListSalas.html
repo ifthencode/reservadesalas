@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Salas</title>
+<link rel="shortcut icon" type="image/png" href="http://intranet.optimissa.com/Content/Imagenes/General/candles.png"/>
+<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/wenzhixin/bootstrap-table/master/src/bootstrap-table.css"/>
+<script type="text/javascript" src="https://rawgit.com/wenzhixin/bootstrap-table/master/src/bootstrap-table.js"></script>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+	<div th:replace="admin/menu :: menu"></div>
+	<p class="admin-message-text text-center">Listado Salas</p>
+	<form th:action="@{/salas/crearnuevasala}" method="GET"><button class="btn btn-primary" style="color:white;" type="submit">Nueva Sala</button></form>
+	
+	<div class="container-tabla">
+
+	<!-- <div th:replace="admin/menu :: menu"></div> -->
+	
+<!-- 	<form th:action="@{/alumno/deleteUser}" method="POST">	 -->
+	<table class="table"  data-row-style="rowStyle" data-toggle="table" data-click-to-select="true">
+		  <thead class="thead-dark">
+		    <tr>
+		    <!--   <th sec:authorize="hasAuthority('Admin')" scope="col">Seleccionar</th> -->
+		      <th scope="col">Id</th>
+		      <th scope="col">Nombre</th>
+		      <th scope="col">Descripcion</th>
+		
+		    </tr>
+		  </thead>
+		  <tbody th:each="sala : ${listSalas}">
+		    <tr>
+		     <!--  <td  sec:authorize="hasAuthority('Admin')"><input type="checkbox" id="checkbox" th:name="idChecked" th:value="${user.usuario}"/></td> -->
+		      <td th:text="${sala.idsala}" th:value="${sala.idsala}" th:field="*{usuario}"></td>
+		      <td th:text="${sala.nombre}" th:value="${sala.nombre}" th:field="*{nombre}"></td>
+		      <td th:text="${sala.descripcion}" th:value="${sala.descripcion}" th:field="*{descripcion}"></td>
+		 <!--      <td th:text="${user.apellido2}" th:value="${user.apellido2}" th:field="*{apellido2}"></td> -->
+		   <!--    <td th:text="${user.email}" th:value="${user.email}" th:field="*{email}"></td> -->
+		    </tr>		    
+		  </tbody>
+	</table>
+	<!-- <div sec:authorize="hasAuthority('Admin')" class="botonera">
+		 <button class="btn btn-success">Eliminar</button>
+	</div>
+	</form> -->
+	</div>
+	</div>
+	<div class="container-bottom">
+	
+	<div class="panel-group-home">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					
+				</div>
+				<p class="admin-message-text text-center">Aplicación Reserva de Salas -V 1.0</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
