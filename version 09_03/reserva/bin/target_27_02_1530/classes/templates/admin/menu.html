@@ -1,0 +1,29 @@
+	<div class="container_menu" th:fragment="menu">
+ 			
+	<img th:src="@{/images/optimissa.png}" class="img-responsive center-block" width="300" height="300" alt="Logo" />
+	<div class="menu">
+	<div class="menu_list">
+		<nav class="navbar-inverse bg-inverse">
+	  		<div class="container-fluid">    		
+	    	
+		      <p class="admin-message-text text-center" style="color:blanchedalmond;">Reserva de salas</p>
+			  	
+	  		</div>
+		</nav>	
+		<nav class="navbar-inverse bg-inverse">
+	  		<div class="container-fluid">    		
+	    	<ul class="nav navbar-nav">
+			  <li> <form th:action="@{/reservas}" method="GET"><button class="btn btn-link" style="color:white;" type="submit">Reservas</button></form></li>
+		      <li><form th:action="@{/salas}" method="GET"><button class="btn btn-link" style="color:white;" type="submit">Salas</button></form></li> 
+			  <li><form th:action="@{/usuarios}" method="GET"><button class="btn btn-link" style="color:white;" type="submit">Usuarios</button></form></li>
+			  
+			 </ul>  	
+	  		</div>
+		</nav>	
+		</div>
+		
+		</div>
+		</div>
+		
+		
+		
