@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Salas</title>
+<link rel="shortcut icon" type="image/png" href="http://intranet.optimissa.com/Content/Imagenes/General/candles.png"/>
+<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/wenzhixin/bootstrap-table/master/src/bootstrap-table.css"/>
+<script type="text/javascript" src="https://rawgit.com/wenzhixin/bootstrap-table/master/src/bootstrap-table.js"></script>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+	<div th:replace="admin/menu :: menu"></div>
+	<p class="admin-message-text text-center">Listado Salas</p>
+	<form th:action="@{/salas/crearnuevasala}" method="GET"><button class="btn btn-primary" style="color:white;" type="submit">Nueva Sala</button></form>
+	
+	<div class="container-tabla">
+
+	<!-- <div th:replace="admin/menu :: menu"></div> -->
+	
+<!-- 	<form th:action="@{/alumno/deleteUser}" method="POST">	 -->
+	<table class="table"  data-row-style="rowStyle" data-toggle="table" data-click-to-select="true">
+		  <thead class="thead-dark">
+		    <tr>
+		   
+		      <th scope="col">Id</th>
+		      <th scope="col">Nombre</th>
+		      <th scope="col">Descripcion</th>
+		
+		    </tr>
+		  </thead>
+		  <tbody th:each="sala : ${listSalas}">
+		    <tr>
+		    
+		      <td th:text="${sala.pk_id_sala}" th:value="${sala.pk_id_sala}" th:field="*{pk_id_sala}"></td>
+		      <td th:text="${sala.var_nombre_sala}" th:value="${sala.var_nombre_sala}" th:field="*{var_nombre_sala}"></td>
+					<td th:text="${sala.var_descripcion_sala}" th:value="${sala.var_descripcion_sala}" th:field="*{var_descripcion_sala}"></td>
+					<td><form th:action="@{/salas/borrar}" method="GET"> <button class="btn btn-primary" type="submit" th:name="id" th:value="${sala.pk_id_sala}">Borrar</button></form></td>
+					<td><form th:action="@{/salas/modificar}" method="GET"><button class="btn btn-primary" type="submit" th:name="id" th:value="${sala.pk_id_sala}">Modificar</button></form></td>
+		
+		    </tr>		    
+		  </tbody>
+	</table>
+
+	</div>
+	</div>
+	<div class="container-bottom">
+	
+	<div class="panel-group-home">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					
+				</div>
+				<p class="admin-message-text text-center">Aplicación Reserva de Salas -V 1.0</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

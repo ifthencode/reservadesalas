@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Nueva Reserva</title>
+<link rel="shortcut icon" type="image/png" href="http://intranet.optimissa.com/Content/Imagenes/General/candles.png"/>
+<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+	<div th:replace="admin/menu :: menu"></div>
+	<div class="panel-group-home">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					
+				</div>
+				<p class="admin-message-text text-center">Nueva Reserva</p>
+			</div>
+		</div>
+	
+	<div class="container-tabla">
+	
+
+		<!-- Formulario de alta -->
+		<form th:action="@{/reservas/crearnuevareserva}"  method="POST">
+		  <label for="nombre">Usuario reserva</label>
+		  <select class="form-control" id="usuario" name="usuario" >
+    		<option th:each="usuario : ${listUsuarios}" th:name="usuario" th:value="${usuario.pk_id_usuario}" th:text="${usuario.var_nombre_usuario}+' '+${usuario.var_apellidos_usuario}"></option>
+			</select>
+			 <label for="nombre">Selecciona: sala fecha hora</label>
+			<select class="form-control" id="reserva" name="reserva" >
+    			<option th:each="reservas : ${listReservas}" th:name="reserva" th:value="${reservas[3]}+'-'+${reservas[4]}" th:text="${reservas[0]}+' '+${reservas[1]}+' '+${reservas[2]}"></option>
+			</select>
+			
+		 
+		
+		  <button type="submit" class="btn btn-primary">Enviar</button>
+	   </form>
+		
+	</div>
+	</div>
+	<div class="container-bottom">
+	
+	<div class="panel-group-home">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					
+				</div>
+				<p class="admin-message-text text-center">Aplicación Reserva de Salas -V 1.0</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

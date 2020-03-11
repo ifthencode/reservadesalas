@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Reservas</title>
+<link rel="shortcut icon" type="image/png" href="http://intranet.optimissa.com/Content/Imagenes/General/candles.png"/>
+<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/wenzhixin/bootstrap-table/master/src/bootstrap-table.css"/>
+<script type="text/javascript" src="https://rawgit.com/wenzhixin/bootstrap-table/master/src/bootstrap-table.js"></script>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+</head>
+
+<body class="body">
+	
+	<div class="container">
+	<div th:replace="admin/menu :: menu"></div>
+	<p class="admin-message-text text-center">Listado Reservas</p>
+		
+	<form th:action="@{/reservas/crearnuevareserva}" method="GET"><button class="btn btn-primary" style="color:white;" type="submit">Nueva Reserva</button></form>
+	<div class="container-tabla">
+	
+	<!-- <div th:replace="admin/menu :: menu"></div> -->
+	
+<!-- 	<form th:action="@{/alumno/deleteUser}" method="POST">	 -->
+	<table class="table"  data-row-style="rowStyle" data-toggle="table" data-click-to-select="true">
+		  <thead class="thead-dark">
+		    <tr>
+		   
+					<th scope="col">Nombre Sala</th>
+					<th scope="col">Fecha y hora</th>
+					<th scope="col">Usuario</th>
+		 
+		
+		    </tr>
+		  </thead>
+		  <tbody th:each="reserva : ${listReservas}">
+		    <tr>
+		     
+					<td th:text="${reserva[0]}" th:value="${reserva[0]}" th:field="*{reserva[0]}"></td>
+					<td th:text="${reserva[1]}+' '+${reserva[2]}" th:value="${reserva[1]}" th:field="*{reserva[1]}"></td>
+					<td th:text="${reserva[3]}+' '+${reserva[4]}" th:value="${reserva[3]}" th:field="*{reserva[3]}"></td>
+		     
+		    </tr>		    
+		  </tbody>
+	</table>
+	
+	 <script>
+	$(document).ready(function() {
+    var table = $('#table').DataTable();
+ 
+    $('#example tbody').on( 'click', 'tr', function () {
+        $(this).toggleClass('selected');
+    } );
+ 
+    $('#button').click( function () {
+        alert( table.rows('.selected').data().length +' row(s) selected' );
+    } );
+} );
+</script>
+	</div>
+	</div>
+	
+
+	<div class="container-bottom">
+	
+	<div class="panel-group-homer">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					
+				</div>
+				<p class="admin-message-text text-center">Aplicación Reserva de Salas -V 1.0</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
